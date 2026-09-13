@@ -61,7 +61,7 @@ public class NoteListActivity extends AppCompatActivity {
                 Toast.makeText(NoteListActivity.this, "삭제 완료", Toast.LENGTH_SHORT).show();
             }
 
-            @Override
+       //     @Override
             public void onGoogleSave(Note note) {
                 GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(NoteListActivity.this);
                 if (account == null) {

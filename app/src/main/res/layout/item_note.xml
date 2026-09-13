@@ -55,16 +55,16 @@
             android:paddingHorizontal="10dp"
             android:layout_marginEnd="6dp" />
 
-<!--        &lt;!&ndash; 구글 저장 버튼 (흰색 배경 + 검은 테두리 + 검은 텍스트) &ndash;&gt;-->
-<!--        <androidx.appcompat.widget.AppCompatButton-->
-<!--            android:id="@+id/btnGoogleSync"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:text="구글 저장"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textColor="#000000"-->
-<!--            android:background="@drawable/btn_border"-->
-<!--            android:paddingHorizontal="10dp" />-->
+  <!--     구글 저장 버튼 (흰색 배경 + 검은 테두리 + 검은 텍스트)
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGoogleSync"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="구글 저장"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/btn_border"
+            android:paddingHorizontal="10dp" />    -->
     </LinearLayout>
 
     <!-- 구분선 (검정색) -->

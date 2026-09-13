@@ -12,7 +12,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public interface OnNoteListener {
         void onEdit(Note note);
         void onDelete(Note note);
-        void onGoogleSave(Note note);
+ //       void onGoogleSave(Note note);
     }
 
     private List<Note> list;
@@ -42,7 +42,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         holder.binding.tvDate.setText(note.updatedAt);
         holder.binding.btnEdit.setOnClickListener(v -> listener.onEdit(note));
         holder.binding.btnDelete.setOnClickListener(v -> listener.onDelete(note));
-    //    holder.binding.btnGoogleSync.setOnClickListener(v -> listener.onGoogleSave(note));
+//        holder.binding.btnGoogleSync.setOnClickListener(v -> listener.onGoogleSave(note));
     }
 
     @Override

@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId = "com.soorinote.einknote"
-        minSdk = 29
+        minSdk = 28  // 안드로이드9
         targetSdk = 34
-        versionCode = 4  // 구글 로그인 수정
-        versionName = "1.4"
+        versionCode = 7  // 구글 로그인 수정
+        versionName = "1.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     // ---------------- [여기 블록 추가] ----------------
@@ -85,6 +85,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 
     implementation 'com.google.guava:guava:31.1-android'
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- E-ink에서 잘 보이도록 완전한 검은색과 3dp 두께 지정 -->
+    <solid android:color="#000000" />
+    <size android:width="3dp" />
+</shape>

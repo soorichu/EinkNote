@@ -31,8 +31,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTES);
-        onCreate(db);
+    //    db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTES);
+    //    onCreate(db);
+        // 1. 단순 유지: 아무 작업도 하지 않거나 필요한 마이그레이션만 수행
+        if (oldVersion < 2) {
+            // 예: 버전 2에서 새 컬럼이 추가된 경우 데이터 유지하며 컬럼만 추가
+            db.execSQL("ALTER TABLE notes ADD COLUMN updated_at TEXT;");
+        }
     }
 
     public long insertOrUpdate(long id, String title, String content) {

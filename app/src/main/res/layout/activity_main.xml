@@ -32,6 +32,7 @@
             android:layout_height="36dp"
             android:layout_weight="1"
             android:background="@drawable/btn_border"
+            android:textCursorDrawable="@drawable/eink_cursor"
             android:hint="제목을 입력하세요"
             android:textColorHint="#555555"
             android:textColor="#000000"
@@ -48,19 +49,29 @@
             android:textSize="13sp"
             android:textColor="#000000"
             android:background="@drawable/btn_border"
-            android:paddingHorizontal="12dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="6dp" />
+            android:layout_marginStart="8dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSaveGoogle"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="구글 저장"
+            android:text="GOOGLE"
             android:textSize="13sp"
             android:textColor="#000000"
             android:background="@drawable/btn_border"
-            android:paddingHorizontal="12dp" />
+            android:paddingHorizontal="12dp"
+            android:layout_marginStart="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnExport"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="TXT"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:background="@drawable/btn_border"
+            android:paddingHorizontal="12dp"
+            android:layout_marginStart="8dp"/>
     </LinearLayout>
 
     <!-- 상단 구분선 -->
@@ -73,6 +84,7 @@
     <!-- 본문 작성 에디터 -->
     <EditText
         android:id="@+id/etContent"
+        android:textCursorDrawable="@drawable/eink_cursor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
