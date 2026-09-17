@@ -27,6 +27,12 @@ public class NoteListActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
+
+
+        binding.btnSettings.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SettingActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

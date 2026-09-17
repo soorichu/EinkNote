@@ -1,8 +1,11 @@
 package com.soorinote.einknote;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,6 +13,7 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +34,9 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.tasks.Task;
 import com.soorinote.einknote.databinding.ActivityMainBinding;
-import com.soorinote.einknote.TxtSave;
+
+import java.io.File;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "EinkNote";
@@ -44,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
     private final Scope docsScope = new Scope("https://www.googleapis.com/auth/documents");
     private final Scope driveScope = new Scope("https://www.googleapis.com/auth/drive.file");
+
+    // 액티비티 멤버 변수
+    private String pendingUploadFilePath = null;
+    private String pendingUploadContent = null;
 
     // 타이핑 후 화면을 정리할 지연 시간 (1.5초)
     private static final long TYPING_DELAY_MS = 1500;
@@ -71,12 +81,43 @@ public class MainActivity extends AppCompatActivity {
         if (currentNoteId != -1) {
             binding.etTitle.setText(getIntent().getStringExtra("note_title"));
             binding.etContent.setText(getIntent().getStringExtra("note_content"));
-
         }
+
         initGoogleClient();
         initListeners();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        applyCustomFontAndSize();
+    }
+
+    // 설정에서 지정한 폰트와 글자 크기를 적용하기
+    private void applyCustomFontAndSize() {
+        SharedPreferences prefs = getSharedPreferences(SettingActivity.PREF_NAME, Context.MODE_PRIVATE);
+
+        // 1. 폰트 크기 적용
+        int fontSize = prefs.getInt(SettingActivity.KEY_FONT_SIZE, 16);
+        binding.etContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
+        binding.etTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, Math.min(fontSize + 2, 32)); // 제목은 본문보다 살짝 크게
+
+        // 2. 사용자 폰트 적용
+        String fontPath = prefs.getString(SettingActivity.KEY_FONT_PATH, null);
+        if (fontPath != null && new File(fontPath).exists()) {
+            try {
+                Typeface customTypeface = Typeface.createFromFile(fontPath);
+                binding.etTitle.setTypeface(customTypeface);
+                binding.etContent.setTypeface(customTypeface);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            // 기본 폰트로 복원
+            binding.etTitle.setTypeface(Typeface.DEFAULT);
+            binding.etContent.setTypeface(Typeface.DEFAULT);
+        }
+    }
 
     private void initListeners() {
         binding.btnBack.setOnClickListener(v -> {
@@ -294,4 +335,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

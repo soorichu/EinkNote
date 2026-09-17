@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EinkNote</string>
+    <string name="btn_back">목록</string>
+    <string name="et_title">제목</string>
+    <string name="btn_save_local">저장</string>
+    <string name="btn_save_google">구글</string>
+    <string name="btn_save_dropbox">드롭박스</string>
+    <string name="btn_export">TXT</string>
+    <string name="et_content">메모를 작성하세요...</string>
+    <string name="btn_new">+ 새메모</string>
+    <string name="btn_empty">"저장된 메모가 없습니다."</string>
+    <string name="btn_edit">보기</string>
+    <string name="btn_delete">삭제</string>
+    <string name="setting">설정</string>
+</resources>

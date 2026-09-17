@@ -10,8 +10,8 @@ android {
         applicationId = "com.soorinote.einknote"
         minSdk = 28  // 안드로이드9
         targetSdk = 34
-        versionCode = 7  // 구글 로그인 수정
-        versionName = "1.7"
+        versionCode = 12  // 폰트 설정 추가
+        versionName = "2.1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     // ---------------- [여기 블록 추가] ----------------
@@ -71,11 +71,7 @@ dependencies {
         exclude group: 'org.apache.httpcomponents'
         exclude group: 'com.google.guava', module: 'listenablefuture'
     }
-    // Google Drive API (폴더 생성 및 파일 이동용)
-//    implementation('com.google.apis:google-api-services-drive:v3-rev20220815-1.32.1') {
-//        exclude group: 'org.apache.httpcomponents'
-//        exclude group: 'com.google.guava', module: 'listenablefuture'
-//    }
+
     // 최신 안정화 Drive v3 버전으로 교체
     implementation('com.google.apis:google-api-services-drive:v3-rev20230822-2.0.0') {
         exclude group: 'org.apache.httpcomponents'
@@ -85,7 +81,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
-
     implementation 'com.google.guava:guava:31.1-android'
+
+    // Dropbox Core SDK
+    implementation 'com.dropbox.core:dropbox-core-sdk:5.4.5'
 }

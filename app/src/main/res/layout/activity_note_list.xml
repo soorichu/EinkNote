@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     android:padding="12dp">
 
     <!-- 상단 헤더 영역 -->
@@ -19,19 +19,31 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="EinkNote"
+            android:text="@string/app_name"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNew"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:text="+ 새 메모"
+            android:layout_height="48dp"
+            android:text="@string/btn_new"
             android:textSize="13sp"
             android:textStyle="bold"
-            android:textColor="#000000"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_border"
+            android:paddingHorizontal="14dp"
+            android:layout_marginEnd="6dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/setting"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:background="@drawable/btn_border"
             android:paddingHorizontal="14dp" />
     </LinearLayout>
@@ -40,7 +52,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="@color/black"
         android:layout_marginBottom="8dp" />
 
     <!-- 빈 화면 안내 문구 (메모가 없을 때) -->
@@ -49,8 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="저장된 메모가 없습니다."
-        android:textColor="#000000"
+        android:text="@string/btn_empty"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:paddingVertical="32dp"
         android:visibility="gone" />

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="#000000" />
+        android:textColor="@color/black" />
 
     <!-- 작성일자 (검정색) -->
     <TextView
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:layout_marginVertical="4dp" />
 
     <!-- 기능 버튼 그룹 -->
@@ -31,14 +31,14 @@
         android:gravity="end"
         android:orientation="horizontal">
 
-        <!-- 수정 버튼 (흰색 배경 + 검은 테두리 + 검은 텍스트) -->
+        <!-- 수정 및 보기 버튼 (흰색 배경 + 검은 테두리 + 검은 텍스트) -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:text="보기"
+            android:text="@string/btn_edit"
             android:textSize="12sp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:background="@drawable/btn_border"
             android:paddingHorizontal="10dp"
             android:layout_marginEnd="6dp" />
@@ -48,9 +48,9 @@
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:text="삭제"
+            android:text="@string/btn_delete"
             android:textSize="12sp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:background="@drawable/btn_border"
             android:paddingHorizontal="10dp"
             android:layout_marginEnd="6dp" />
@@ -60,9 +60,9 @@
             android:id="@+id/btnGoogleSync"
             android:layout_width="wrap_content"
             android:layout_height="32dp"
-            android:text="구글 저장"
+            android:text="@string/btn_save_google"
             android:textSize="12sp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:background="@drawable/btn_border"
             android:paddingHorizontal="10dp" />    -->
     </LinearLayout>
@@ -71,6 +71,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="@color/black"
         android:layout_marginTop="8dp" />
 </LinearLayout>

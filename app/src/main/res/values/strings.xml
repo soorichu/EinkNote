@@ -1,3 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">EinkNote</string>
+    <string name="btn_back">LIST</string>
+    <string name="et_title">Title</string>
+    <string name="btn_save_local">SAVE</string>
+    <string name="btn_save_google">GOOG</string>
+    <string name="btn_save_dropbox">DROPBOX</string>
+    <string name="btn_export">TXT</string>
+    <string name="et_content">Writing...</string>
+    <string name="btn_new">+ NEW</string>
+    <string name="btn_empty">"There are no saved notes."</string>
+    <string name="btn_edit">OPEN</string>
+    <string name="btn_delete">DELETE</string>
+    <string name="setting">SETTING</string>
 </resources>

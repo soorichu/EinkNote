@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 상단 헤더 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/setting"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/btn_back"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_border"
+                android:paddingHorizontal="14dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 1. 메모 저장 위치 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메모 저장 위치"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rgStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbInternalStorage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="[내부저장소]/einknote/"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbExternalStorage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="[외부저장소]/einknote/"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D0D0D0"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 2. 사용자 폰트 상태 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용자 폰트 지정 (제목 + 본문)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSelectFont"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="사용자 폰트 지정하기"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_border"
+                android:paddingHorizontal="14dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFontStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택된 폰트: 시스템 기본 폰트"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* 사용자폰트.ttf를 [저장소]/einknote/ 에 넣어주세요."
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+        <!-- 3. 글자 크기 조절 (5sp ~ 30sp) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글자 크기 지정 (5sp ~ 30sp)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSizeMinus"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_border" />
+
+            <TextView
+                android:id="@+id/tvCurrentSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="16 sp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSizePlus"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_border" />
+        </LinearLayout>
+
+        <!-- 4. 폰트/크기 미리보기 박스 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvFontPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="하얀 것은 e-Paper, 검은 것은 e-Eink로다..."
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 여백 분배를 위한 뷰 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 5. 서비스 약관 & 개인정보 방침 링크 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서비스(https://soorichu.github.io/einknote/service/)"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:paddingVertical="4dp" />
+
+            <TextView
+                android:id="@+id/tvPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개인정보방침(https://soorichu.github.io/privacy/)"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
