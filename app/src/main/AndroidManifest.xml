@@ -19,7 +19,7 @@
 
         <!-- 목록 화면을 런처 액티비티로 지정 -->
         <activity
-            android:name=".NoteListActivity"
+            android:name="cloud.einknote.note.NoteListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +28,11 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name="cloud.einknote.note.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name=".SettingActivity"
+        <activity android:name="cloud.einknote.note.SettingActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"/>
 

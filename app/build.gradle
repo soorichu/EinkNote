@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace = 'com.soorinote.einknote'
+    namespace = 'cloud.einknote.note'
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.soorinote.einknote"
+        applicationId = "cloud.einknote.note"
         minSdk = 28  // 안드로이드9
         targetSdk = 34
-        versionCode = 12  // 폰트 설정 추가
-        versionName = "2.1.1"
+        versionCode = 13  // 디렉토리 수정
+        versionName = "2.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     // ---------------- [여기 블록 추가] ----------------
