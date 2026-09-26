@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="메모 저장 위치"
+            android:text="@string/storage_location_ref"
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -68,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="[내부저장소]/einknote/"
+                android:text="@string/internal_storage"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 android:checked="true" />
@@ -78,7 +78,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="[외부저장소]/einknote/"
+                android:text="@string/external_strage"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
         </RadioGroup>
@@ -93,7 +93,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사용자 폰트 지정 (제목 + 본문)"
+            android:text="@string/select_font"
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -110,7 +110,7 @@
                 android:id="@+id/btnSelectFont"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                android:text="사용자 폰트 지정하기"
+                android:text="@string/btn_select_font"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -122,14 +122,14 @@
             android:id="@+id/tvFontStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="선택된 폰트: 시스템 기본 폰트"
+            android:text="@string/selected_font"
             android:textSize="13sp"
             android:textColor="@color/black"
             android:layout_marginBottom="5dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="* 사용자폰트.ttf를 [저장소]/einknote/ 에 넣어주세요."
+            android:text=""
             android:textSize="13sp"
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
@@ -137,7 +137,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="글자 크기 지정 (5sp ~ 30sp)"
+            android:text="@string/user_font_size"
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -154,7 +154,7 @@
                 android:id="@+id/btnSizeMinus"
                 android:layout_width="48dp"
                 android:layout_height="44dp"
-                android:text="-"
+                android:text="@string/btn_font_size_minus"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -175,7 +175,7 @@
                 android:id="@+id/btnSizePlus"
                 android:layout_width="48dp"
                 android:layout_height="44dp"
-                android:text="+"
+                android:text="@string/btn_font_size_plus"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
@@ -194,7 +194,7 @@
                 android:id="@+id/tvFontPreview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="하얀 것은 e-Paper, 검은 것은 e-Eink로다..."
+                android:text="@string/preview_of_applied_font"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -225,7 +225,7 @@
                 android:id="@+id/tvTerms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="서비스(https://soorichu.github.io/einknote/service/)"
+                android:text="서비스(https://einknote.cloud/einknote/service/)"
                 android:textColor="@color/black"
                 android:textSize="11sp"
                 android:paddingVertical="4dp" />
@@ -234,7 +234,7 @@
                 android:id="@+id/tvPrivacy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="개인정보방침(https://soorichu.github.io/privacy/)"
+                android:text="개인정보방침(https://einknote.cloud/privacy/)"
                 android:textColor="@color/black"
                 android:textSize="11sp"
                 android:paddingVertical="4dp" />

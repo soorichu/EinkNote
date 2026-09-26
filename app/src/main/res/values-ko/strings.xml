@@ -13,4 +13,18 @@
     <string name="btn_edit">보기</string>
     <string name="btn_delete">삭제</string>
     <string name="setting">설정</string>
+    <string name="storage_location_ref">메모 저장 위치</string>
+    <string name="internal_storage">[내부저장소]/einknote/</string>
+    <string name="external_strage">[외부저장소]/einknote/</string>
+    <string name="select_font">사용자 지정 폰트 (제목 + 본문)</string>
+    <string name="btn_select_font">폰트 선택하기</string>
+    <string name="selected_font">선택된 폰트 : 시스템 기본 폰트</string>
+    <string name="how_to_select_font">* 사용자폰트.ttf를 [저장소]/einknote/ 에 넣어주세요.</string>
+    <string name="user_font_size">글자 크기 지정 (5sp ~ 30sp)</string>
+    <string name="btn_font_size_minus">-</string>
+    <string name="btn_font_size_plus">+</string>
+    <string name="preview_of_applied_font">하얀 것은 e-Paper, 검은 것은 e-Eink로다...</string>
+
+
+
 </resources>

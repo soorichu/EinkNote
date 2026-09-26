@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EinkNote</string>
     <string name="btn_back">LIST</string>
     <string name="et_title">Title</string>
@@ -13,4 +13,16 @@
     <string name="btn_edit">OPEN</string>
     <string name="btn_delete">DELETE</string>
     <string name="setting">SETTING</string>
+    <string name="storage_location_ref">The Storage of the Note</string>
+    <string name="internal_storage">[INTERNAL_STORAGE]/einknote/</string>
+    <string name="external_strage">[EXTERNAL_STORAGE]/einknote/</string>
+    <string name="select_font">Select User Font (Title + Content)</string>
+    <string name="btn_select_font">Select Font</string>
+    <string name="selected_font">Selected Font : The System Default Font</string>
+    <string name="how_to_select_font">* Please place the user_font.ttf file in [Storage]/einknote/</string>
+    <string name="user_font_size">User Font Size (5sp ~ 30sp)</string>
+    <string name="btn_font_size_minus">-</string>
+    <string name="btn_font_size_plus">+</string>
+    <string name="preview_of_applied_font">The white one is the e-Paper, and the black one is the e-Eink...</string>
+
 </resources>
